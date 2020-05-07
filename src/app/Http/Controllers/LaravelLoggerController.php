@@ -160,7 +160,7 @@ class LaravelLoggerController extends BaseController
             $activity->delete();
         }
 
-        return redirect('activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logClearedSuccessfuly'));
+        return redirect()->route('admin.activity.index')->with('success', trans('LaravelLogger::laravel-logger.messages.logClearedSuccessfuly'));
     }
 
     /**
@@ -255,7 +255,7 @@ class LaravelLoggerController extends BaseController
             $activity->forceDelete();
         }
 
-        return redirect('activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logDestroyedSuccessfuly'));
+        return redirect()->route('admin.activity.index')->with('success', trans('LaravelLogger::laravel-logger.messages.logDestroyedSuccessfuly'));
     }
 
     /**
@@ -272,7 +272,7 @@ class LaravelLoggerController extends BaseController
             $activity->restore();
         }
 
-        return redirect('activity')->with('success', trans('LaravelLogger::laravel-logger.messages.logRestoredSuccessfuly'));
+        return redirect()->route('admin.activity.index')->with('success', trans('LaravelLogger::laravel-logger.messages.logRestoredSuccessfuly'));
     }
 
     /**
